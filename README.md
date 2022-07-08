@@ -4,7 +4,7 @@
 
 # Installation guide
 
-### Only do this
+### Only do this to install SearcHinTerminaL
 
 ```
 chmod +x Install
@@ -14,19 +14,18 @@ chmod +x Install
 ./Install
 ```
 
-**If the script is installed correctly you'll see**
+### **If the script is installed correctly you'll see**
 
-
- `Search is installed`
+### **`Search is installed`**
  
- **`search --help` to see the flags**
+### **`search --help`** to see the flags
  
- # To change browser
+# To change browser
  
- ### 1.- Go to your `.config`
+### 1.- Go to your **`.config`**
  
- ### 2.- Edit the file `Default-Broser-DB`
+### 2.- Edit the file **`Default-Broser-DB`**
  
- ### 3.- Change `chromium` by your favorite browser (the name in /usr/bin)
+### 3.- Change **`chromium`** by your favorite browser (the executable in **`/usr/bin`**)
 
 
