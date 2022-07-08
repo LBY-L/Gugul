@@ -9,6 +9,14 @@
 ### Only do this to install SearcHinTerminaL
 
 ```
+git clone https://github.com/LBY-L/SearcHinTerminaL.git
+```
+
+```
+cd SearcHinTerminaL
+```
+
+```
 chmod +x Install
 ```
 
