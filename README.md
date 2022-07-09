@@ -35,7 +35,7 @@ chmod +x Install
 
 ### **If the script is installed correctly you'll see**
 
-### `Search is installed`
+### `Search v1.0 is installed`
  
 ### `search --help` **to see the flags**
  
