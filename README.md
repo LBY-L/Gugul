@@ -1,8 +1,8 @@
-# **SearcHinTerminaL**
+# **SearcHinTerminaL v1.0**
 
 ![image](https://user-images.githubusercontent.com/93894290/178047602-36e5e2e2-a972-46b0-ade2-faffb2f9e949.png)
 
-> ### **This is a browser in the terminal v1.0**
+> ### **This is a browser in the terminal**
 
 # Suported terminals
 
