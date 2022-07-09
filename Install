@@ -61,7 +61,7 @@ else
 	echo ""
 	echo "Tilix"
 	echo "Konsole"
-	echo "Gnome terminal (in a few days is going to remove beacause the option -e is decrapted)"
+	echo "Gnome terminal (in a few days is going to remove because the option -e is decrapted)"
 	echo "Xfce Terminal"
 	echo "Alacritty"
 	echo "Kitty"
