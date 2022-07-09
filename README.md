@@ -2,7 +2,16 @@
 
 ![image](https://user-images.githubusercontent.com/93894290/178047602-36e5e2e2-a972-46b0-ade2-faffb2f9e949.png)
 
-> ### **This is a browser in the terminal**
+> ### **This is a browser in the terminal v1.0**
+
+# Suported terminals
+
+> ## Tilix
+> ## Konsole
+> ## Gnome terminal (in a few days is going to remove but the option -e is decrapted)
+> ## Xfce Terminal
+> ## Alacritty
+> ## Kitty
 
 # Installation guide
 
