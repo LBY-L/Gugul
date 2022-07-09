@@ -8,7 +8,7 @@
 
 > ## Tilix
 > ## Konsole
-> ## Gnome terminal (in a few days is going to remove beacause the flag `-e` is "decrapted")
+> ## Gnome terminal (in a few days is going to remove because the flag `-e` is "decrapted")
 > ## Xfce Terminal
 > ## Alacritty
 > ## Kitty
