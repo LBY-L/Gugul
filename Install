@@ -48,7 +48,7 @@ else
 	echo "You want to update? (y/n)"
 	read -n1 input
 	if [[ $input == y ]]; then
-		bash -c $(wget -gO- https://raw.githubusercontent.com/LBY-L/SearcHinTerminaL/main/Install)
+		bash -c $(wget -qO- https://raw.githubusercontent.com/LBY-L/SearcHinTerminaL/main/Install)
 	elif [[ $input == n ]]; then
 		echo ""
 	fi
