@@ -37,7 +37,7 @@ fi
 # Check Version
 
 echo "Checking Version..."
-rm -r ~/VSearcHin
+sudo rm -r ~/VSearcHin
 git clone https://github.com/LBY-L/VersionSearcH.git ~/VSearcHin
 VersionLocal=11
 VersionLAN=$(cat ~/VSearcHin/version)
@@ -242,12 +242,12 @@ if [[ $Verify == ~/.config/Default-Broser-DB ]]; then
 	content
 	sudo cp $dir/search /usr/bin/ 
 	clear
-	echo "Search v1.0 is installed"
+	echo "Search v1.1 is installed"
 else
 	touch ~/.config/Default-Broser-DB
 	echo 'chromium' >> ~/.config/Default-Broser-DB
 	content
 	sudo cp $dir/search /usr/bin/
 	clear
-	echo "Search v1.0 is installed"
+	echo "Search v1.1 is installed"
 fi
