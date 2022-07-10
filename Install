@@ -22,7 +22,7 @@ chmod +777 $dir/search
 
 ## Version gui ##
 
-VerG="v1.4"
+VerG="v1.5"
 
 ### Content ###
 
@@ -115,7 +115,7 @@ while true; do
 
 	rm -r /tmp/buscador-tmp
 	touch /tmp/buscador-tmp
-	tput setab 4
+	tput setab 0
 	clear
 	x=$(tput cols)
 	y=$(tput lines)
@@ -189,7 +189,7 @@ fi
 	tput cup $y4 0
 	echo "═＜$bar＞═To reboot use :r & to exit use :q═"
 	tput cup $y6 0
-	echo "═＜v1.4＞═"
+	echo "═＜v1.5＞═"
 	tput cup $y3 0
 	tput setaf 15
 	read input
