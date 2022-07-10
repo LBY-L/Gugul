@@ -37,7 +37,7 @@ fi
 # Check Version
 
 echo "Checking Version..."
-sudo rm -r ~/VSearcHin
+rm -r ~/VSearcHin
 git clone https://github.com/LBY-L/VersionSearcH.git ~/VSearcHin
 VersionLocal=11
 VersionLAN=$(cat ~/VSearcHin/version)
