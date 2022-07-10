@@ -17,7 +17,7 @@
 
 ### Only do this to install SearcHinTerminaL
 ```
-bash -c $(wget -qO- https://raw.githubusercontent.com/LBY-L/SearcHinTerminaL/main/Install)
+bash -c "$(wget -qO- https://raw.githubusercontent.com/LBY-L/SearcHinTerminaL/main/Install)"
 ```
 ### **If the script is installed correctly you'll see**
 
