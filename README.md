@@ -1,4 +1,4 @@
-# **SearcHinTerminaL v1.2**
+# **SearcHinTerminaL v1.3**
 
 ![image](https://user-images.githubusercontent.com/93894290/178047602-36e5e2e2-a972-46b0-ade2-faffb2f9e949.png)
 
@@ -16,26 +16,12 @@
 # Installation guide
 
 ### Only do this to install SearcHinTerminaL
-
 ```
-git clone https://github.com/LBY-L/SearcHinTerminaL.git
+bash -c $(wget -qO- https://raw.githubusercontent.com/LBY-L/SearcHinTerminaL/main/Install)
 ```
-
-```
-cd SearcHinTerminaL
-```
-
-```
-chmod +x Install
-```
-
-```
-./Install
-```
-
 ### **If the script is installed correctly you'll see**
 
-### `Search v1.2 is installed`
+### `Search v1.3 is installed`
  
 ### `search --help` **to see the flags**
  
