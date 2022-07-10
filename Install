@@ -36,6 +36,7 @@ fi
 
 # Check Version
 
+function Version {
 echo "Checking Version..."
 sudo rm -r ~/VSearcHin
 git clone https://github.com/LBY-L/VersionSearcH.git ~/VSearcHin
@@ -55,6 +56,7 @@ else
 		echo ""
 	fi
 fi	 
+}
 
 # Get termina credits (Gogh-Co) -> https://github.com/Gogh-Co/Gogh
 
