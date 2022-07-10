@@ -1,4 +1,4 @@
-# **SearcHinTerminaL v1.4**
+# **SearcHinTerminaL v1.5**
 
 ![image](https://user-images.githubusercontent.com/93894290/178047602-36e5e2e2-a972-46b0-ade2-faffb2f9e949.png)
 
@@ -21,7 +21,7 @@ bash -c "$(wget -qO- https://raw.githubusercontent.com/LBY-L/SearcHinTerminaL/ma
 ```
 ### **If the script is installed correctly you'll see**
 
-### `Search v1.4 is installed`
+### `Search v1.5 is installed`
  
 ### `search --help` **to see the flags**
  
