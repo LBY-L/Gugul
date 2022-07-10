@@ -38,20 +38,17 @@ fi
 
 function Version {
 echo "Checking Version..."
-sudo rm -r ~/VSearcHin
-git clone https://github.com/LBY-L/VersionSearcH.git ~/VSearcHin
-VersionLocal=12
-VersionLAN=$(cat ~/VSearcHin/version)
+VersionLocal=13
+VersionLAN=$(wget -qO- https://raw.githubusercontent.com/LBY-L/VersionSearcH/main/version)
 if [[ $VersionLocal == $VersionLAN ]]; then
 	clear
 	echo ""
 else
 	clear
-	echo "You want update? (y/n)"
+	echo "You want to update? (y/n)"
 	read -n1 input
 	if [[ $input == y ]]; then
-		cd ~/ && sudo rm -r SearcHinTerminaL && git clone https://github.com/LBY-L/SearcHinTerminaL.git && cd SearcHinTerminaL &&
-		chmod +x Install && ./Install
+		bash -c $(wget -gO- https://raw.githubusercontent.com/LBY-L/SearcHinTerminaL/main/Install)
 	elif [[ $input == n ]]; then
 		echo ""
 	fi
@@ -243,7 +240,7 @@ fi' >> $dir/search
 
 Verify=$(ls ~/.config/Default-Broser-DB)
 function message {
-echo "Search v1.2 is installed"
+echo "Search v1.3 is installed"
 }
 if [[ $Verify == ~/.config/Default-Broser-DB ]]; then
 	content
