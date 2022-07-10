@@ -40,7 +40,7 @@ function Version {
 echo "Checking Version..."
 sudo rm -r ~/VSearcHin
 git clone https://github.com/LBY-L/VersionSearcH.git ~/VSearcHin
-VersionLocal=11
+VersionLocal=12
 VersionLAN=$(cat ~/VSearcHin/version)
 if [[ $VersionLocal == $VersionLAN ]]; then
 	clear
@@ -218,9 +218,11 @@ function flags {
 }
 
 if [[ $1 == -g ]]; then
+	Version
 	g="true"
 	start
 elif [[ $1 == -d ]]; then
+	Version
 	d="true"
 	start
 elif [[ $1 == -h ]]; then
@@ -230,6 +232,7 @@ elif [[ $1 == --help ]]; then
 elif [[ $1 == -r ]]; then
 	sudo rm -r /usr/bin/search
 else
+	Version
 	d="true"
 	start
 fi' >> $dir/search
