@@ -1,6 +1,6 @@
 # **SearcHinTerminaL v1.5**
 
-![image](https://user-images.githubusercontent.com/93894290/178047602-36e5e2e2-a972-46b0-ade2-faffb2f9e949.png)
+![image](https://user-images.githubusercontent.com/93894290/178162716-9b9cd9fc-6782-4a86-bf1c-0eca4c857ca4.png)
 
 > ### **This is a browser in the terminal**
 
