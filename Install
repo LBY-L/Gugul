@@ -45,9 +45,7 @@ fi
 function Version {
 tput setaf 3
 echo "Checking Version..."
-###############
 VersionLocal=14
-###############
 VersionLAN=$(wget -qO- https://raw.githubusercontent.com/LBY-L/VersionSearcH/main/version)
 if [[ $VersionLocal == $VersionLAN ]]; then
 	clear
