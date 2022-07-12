@@ -1,0 +1,39 @@
+#!/bin/bash
+
+# Root
+
+if [[ $(whoami) == root ]]; then
+	tput setaf 1
+	echo "Not execute this script with root"
+	exit
+fi
+
+### Content ###
+
+function content {
+echo "$(wget -qO- https://raw.githubusercontent.com/LBY-L/SearcHinTerminaL/main/search)" >> /usr/bin/search
+}
+
+### INSTALLATION ###
+
+function message {
+tput setaf 2
+echo "Search v1.6 is installed"
+}
+if [[ $(ls ~/.config/Default-Broser-DB) == ~/.config/Default-Broser-DB ]]; then
+	sudo rm -r /usr/bin/search
+	sudo touch /usr/bin/search
+	sudo chmod +777 /usr/bin/search
+	content
+	clear
+	message
+else
+	touch ~/.config/Default-Broser-DB
+	echo 'chromium' >> ~/.config/Default-Broser-DB
+	sudo rm -r /usr/bin/search
+	sudo touch /usr/bin/search
+	sudo chmod +777 /usr/bin/search
+	content
+	clear
+	message
+fi
