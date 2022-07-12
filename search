@@ -13,7 +13,7 @@ fi
 function Version {
 tput setaf 3
 echo "Checking Version..."
-if [[ 15 == $(wget -qO- https://raw.githubusercontent.com/LBY-L/VersionSearcH/main/version) ]]; then
+if [[ 16 == $(wget -qO- https://raw.githubusercontent.com/LBY-L/VersionSearcH/main/version) ]]; then
 	clear
 	echo ""
 else
