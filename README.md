@@ -1,6 +1,6 @@
-# **SearcHinTerminaL v1.5**
+# **SearcHinTerminaL v1.6**
 
-![image](https://user-images.githubusercontent.com/93894290/178162716-9b9cd9fc-6782-4a86-bf1c-0eca4c857ca4.png)
+![image](https://user-images.githubusercontent.com/93894290/178590326-96d9a0c8-c718-4e77-8c07-a7b9154728d4.png)
 
 > ### **This is a browser in the terminal**
 
@@ -21,7 +21,7 @@ bash -c "$(wget -qO- https://raw.githubusercontent.com/LBY-L/SearcHinTerminaL/ma
 ```
 ### **If the script is installed correctly you'll see**
 
-### `Search v1.5 is installed`
+### `Search v1.6 is installed`
  
 ### `search --help` **to see the flags**
  
