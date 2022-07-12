@@ -1,0 +1,254 @@
+#!/usr/bin/env bash
+
+# Root
+
+if [[ $(whoami) == root ]]; then
+	tput setaf 1
+	echo "Not execute this script with root"
+	exit
+fi
+
+# Check Version
+
+function Version {
+tput setaf 3
+echo "Checking Version..."
+if [[ 15 == $(wget -qO- https://raw.githubusercontent.com/LBY-L/VersionSearcH/main/version) ]]; then
+	clear
+	echo ""
+else
+	function Uptd {
+	clear
+	tput setaf 2
+	tput cup 0 0
+	echo "Do want to update?"
+	tput cup 0 19
+	tput setaf 4
+	echo "(y/n)"
+	read -n1 input
+	case $input in
+	y)
+		bash -c "$(wget -qO- https://raw.githubusercontent.com/LBY-L/SearcHinTerminaL/main/Install)"
+		;;
+	n)
+		echo ""
+		;;
+	*)
+		Uptd
+		;;
+	esac
+	}
+fi	 
+}
+
+# Get terminal credits (Gogh-Co) -> https://github.com/Gogh-Co/Gogh
+
+pid="$$"
+TERMIN="$(ps -h -o comm -p $pid)"
+while [[ "${TERMIN:(-2)}" == "sh" ]]; do
+pid="$(ps -h -o ppid -p $pid)"
+TERMIN="$(ps -h -o comm -p $pid)"
+done
+
+case $TERMIN in
+tilix)
+	termin=tilix
+	;;
+konsole)
+	termin=konsole
+	;;
+gnome-terminal-)
+	termin=gnome-terminal
+	;;
+xfce4-terminal)
+	termin=xfce4-terminal
+	;;
+alacritty)
+	termin=alacritty
+	;;
+kitty)
+	termin=kitty
+	;;
+*)
+	tput setaf 2
+	echo "Please"
+	tput setaf 3
+	echo "Use this terminals:"
+	echo ""
+	tput setaf 4
+	echo "Tilix"
+	echo "Konsole"
+	echo "Gnome terminal (in a few days is going to remove because the flag -e is going to decrapted)"
+	echo "Xfce Terminal"
+	echo "Alacritty"
+	echo "Kitty"
+	exit
+	;;	
+esac
+
+# Start the app
+
+function start {
+while true; do
+
+# Remove past logs
+
+	rm -r /tmp/search-tmp ; touch /tmp/search-tmp
+	tput setab 0
+	clear
+
+# Load variables
+
+	x=$(tput cols)
+	y=$(tput lines)
+	x2=$(($x / 2))
+	y2=$(($y / 2))
+	y5=$(($y2 - 6))
+	x2=$(($x2 - 22))
+	y3=$(($y2 + 1))
+	y4=$(($y3 + 1))
+	y6="$y2"
+
+# Resolution message
+
+function ReT {
+	tput setaf 1
+	echo "Not allowed resolution"
+	exit
+}
+	
+if [[ $x -le 43 ]]; then
+	ReT
+elif [[ $y -le 11 ]]; then
+	ReT
+fi	
+
+# Logo
+
+	tput cup $y5 $x2
+	tput setaf 3
+	echo " ██████╗ ██╗   ██╗ ██████╗ ██╗   ██╗██╗     "
+	y5=$(($y5 + 1))
+	tput cup $y5 $x2
+	tput setaf 3
+	echo "██╔════╝ ██║   ██║██╔════╝ ██║   ██║██║     "
+	y5=$(($y5 + 1))
+	tput cup $y5 $x2
+	tput setaf 3
+	echo "██║  ███╗██║   ██║██║  ███╗██║   ██║██║     "
+	y5=$(($y5 + 1))
+	tput cup $y5 $x2
+	tput setaf 3
+	echo "██║   ██║██║   ██║██║   ██║██║   ██║██║     "
+	y5=$(($y5 + 1))
+	tput cup $y5 $x2
+	tput setaf 3
+	echo "╚██████╔╝╚██████╔╝╚██████╔╝╚██████╔╝███████╗"
+	y5=$(($y5 + 1))
+	tput cup $y5 $x2
+	tput setaf 3
+	echo " ╚═════╝  ╚═════╝  ╚═════╝  ╚═════╝ ╚══════╝"
+
+# The lines
+
+function LineS {
+	tput cup $1 $i
+	tput setaf 12
+	echo "█"
+}
+
+x9=$(($x * 2))
+
+for (( i=0; i<=$x9; i++ ))
+do
+	LineS $y4
+	LineS $y6
+done
+
+case $g in
+	true)
+	bar=""
+	;;
+	*)
+	bar=""
+	;;
+esac
+
+# The bar
+
+	tput cup $y4 1
+	tput setaf 0
+	tput setab 12
+	echo "$bar To reboot use :r & to exit use :q"
+	tput cup $y6 1
+	tput setaf 0
+	tput setab 12
+	echo "v1.6"
+	tput cup $y3 0
+	
+	tput setaf 15
+	tput setab 0
+	read input
+
+# Flags in the app
+
+if [[ -z $input ]]; then
+	echo ""
+fi
+
+case $input in
+:r|:R)
+	echo ""
+	;;
+:q|:Q)
+	clear
+	exit 0
+	;;
+*)
+	tr " " "+" <<< "$input" > /tmp/search-tmp
+	
+	case $g in
+	true)
+		search="https://www.google.com/search?q=$(cat /tmp/search-tmp)"
+		;;
+	*)
+		search="https://duckduckgo.com/?q=$(cat /tmp/search-tmp)&t=h_&ia=web"
+		;;
+	esac
+	
+		$termin -e "$(cat ~/.config/Default-Broser-DB) -e $search"
+		clear
+	;;
+esac
+
+done
+
+}
+
+# Flags in the prompt
+
+function flags {
+	tput setaf 1
+	echo "                    [Flags]                  "   
+	tput setaf 3
+	echo "To change the search engine to Google      -g"
+	echo "To change the search engine to DuckDuckGo  -d"
+	echo "To show this window                        -h"
+	echo "To show this window                    --help"
+	echo "To remove this program                     -r"
+}
+		
+if [[ $1 == -g ]]; then
+	Version
+	g="true"
+	start
+elif [[ $1 == --help ]] | [[ $1 == -h ]]; then
+	flags
+elif [[ $1 == -r ]]; then
+	sudo rm -r /usr/bin/search
+elif [[ $1 == -d ]]; then
+	Version
+	start
+else
+	flags
+fi
