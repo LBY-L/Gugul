@@ -1,4 +1,4 @@
-# **SearcHinTerminaL v1.6**
+# **Gugul v1.6**
 
 ![image](https://user-images.githubusercontent.com/93894290/178590326-96d9a0c8-c718-4e77-8c07-a7b9154728d4.png)
 
